@@ -13,8 +13,8 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
 
-app.config['UPLOAD_PATH'] = '/home/avinash/Documents/'
-app.config['UPLOAD_PATH_1'] = '/home/avinash/Documents/'
+app.config['UPLOAD_PATH'] = '/home/ubuntu/Training/'
+app.config['UPLOAD_PATH_1'] = '/home/ubuntu/Test/'
 
 database = pymongo.MongoClient()["nanonets"]
 userCollection = database['users']
