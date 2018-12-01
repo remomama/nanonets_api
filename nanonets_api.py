@@ -126,13 +126,13 @@ def start_optimisation():
 			if ObjectId.is_valid(data['model_id']):
 				x = modelCollection.find_one({'_id': ObjectId(data['model_id'])})
 				if x:
-					if x['images_uploaded']:
+					if x['images_uploaded'] and x['results'] == 0:
 
 						thread = multiprocessing.Process(target=experiment, args=(data['model_id'],))
 						thread.start()
 						return return_response({'msg': 'process started'})
 					else:
-						return improper_request('images still not uploaded')
+						return improper_request('images still not uploaded or process already optimised/optimising')
 				else:
 					return improper_request('model id does not exist')
 			else:
