@@ -1,3 +1,3 @@
 # nanonets_api
 
-run nanonets_api.py with experiments.py, train.py and test.py in same directory
+Run nanonets_api.py using python or python3 keeping experiments.py, train.py and test.py in same directory
