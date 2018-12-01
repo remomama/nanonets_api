@@ -14,4 +14,4 @@ add a user in users collection with schema:
 	}
 }
 
-Download modules - pymongo, flask and any other modules or dependencies used in code
+Download modules - pymongo, flask are sufficient
